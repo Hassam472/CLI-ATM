@@ -28,12 +28,19 @@ if (pinAnswer.pin === myPin) {
                 message: "Please Enter Withdrawal Amount",
             },
         ]);
-        console.log("Transaction Successfull", `\nYour Remaining Balance is $${myBalance - pinAnswer.Amount}`);
+        console.log("Transaction Successfull", `\nYour Remaining Balance Is $${myBalance - pinAnswer.Amount}`);
     }
+    ;
     if (pinAnswer.Transaction === "Check Balance") {
-        console.log(`$${myBalance.toFixed(2)}`);
+        console.log(`Your Account Balance Is $${myBalance.toFixed(2)}`);
     }
+    ;
+    if (pinAnswer.Amount > myBalance) {
+        console.log("SORRY! Insufficient Balance");
+    }
+    ;
 }
 else {
-    console.log("Wrong pin");
+    console.log("Wrong Pin");
 }
+;
